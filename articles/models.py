@@ -22,4 +22,3 @@ class Article(models.Model):
     def __str__(self):
         return f'{self.id}번 글 - {self.title}: {self.content}'
     # 모델 변경 X 기 때문에 makemigration이나 migrate은 불필요
-    # 

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% comment %} 만들어 놨던 base.html 불러와서 사용한다. {% endcomment %}
+
+{% block title %}Articles Index{% endblock %}
+
+{% block content %}
+<h1>Article List</h1>
+<a href="/articles/new/">게시글 작성</a>
+
+<ul>
+  {% for article in articles %}
+  <li>{{ article.title }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

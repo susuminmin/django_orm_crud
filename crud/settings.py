@@ -34,9 +34,10 @@ INSTALLED_APPS = [
     # local apps
     'articles',
 
-    #
+    # third party apps
+    'django_extensions',  # 설치 - / 등록은 _
 
-    # 
+    # django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'crud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'crud', 'templates')], # 추가 템플릿 폴더로 만들어 줌 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
