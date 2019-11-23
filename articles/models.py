@@ -8,7 +8,7 @@ from django.db import models
 
 class Article(models.Model):
     # id(pk)는 기본적으로 처음 테이블 생성시 자동으로 만들어진다.
-    # id = models.AutoFiled(primary_key=True)
+    # id = models.AutoField(primary_key=True)
 
     # 모든 필드는 기본적으로 NOT NULL => 비어있으면 안 된다.
 
@@ -21,7 +21,6 @@ class Article(models.Model):
 
     def __str__(self):
         return f'{self.id}번 글 - {self.title}: {self.content}'
-    # 모델 변경 X 기 때문에 makemigration이나 migrate은 불필요
 
 
 class Student(models.Model):
